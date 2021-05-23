@@ -79,7 +79,7 @@ You can find the list of the different commands here: https://pentestlab.blog/20
 Visiting /post, we're greeted with `Missing parameter: id`. This shows that the page requires an id parameter. Playing around with it we can see that we're able to mess around with the page and it is indeed vulnerable to sql injection!
 
 ```
-http://10.10.68.254/post?id=-1%20union%20select%201,2,user(),4
+http://10.10.68.254/post?id=-1 union select 1,2,user(),4
 ```
 
 ![post](post_id_user.PNG)
