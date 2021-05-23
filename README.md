@@ -96,7 +96,7 @@ sqlmap -r sqhell_post.request --dbms mysql -D sqhell_5 -T flag --dump
 
 ### Register page
 
-This one is tricky; first, it won't let you register a new user. However, the fact that it takes in data leaves gives us some room to work in. Good thing our burp suite was running in the background, and we were able to identify the user-check parameter. 
+This one is tricky; first, it won't let you register a new user. However, the fact that it takes in data gives us some room to work in. Good thing our burp suite was running in the background, and we were able to identify the user-check parameter. 
 
 ```
 http://10.10.68.254/register/user-check?username=a
