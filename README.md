@@ -46,7 +46,11 @@ The ssh isn't helpful without the credentials, so let's focus on the webserver f
 
 ## Visiting the webserver
 
+![website](webserver_landing_page.PNG)
+
 ### Login page
+
+![login page](login_page.PNG)
 
 I tried the default credentials but to no avail. As the room revolves around SQL injection, let's fire up burp suite and send the request to the repeater to try some SQL injection for authorization bypass manually.
 
@@ -78,9 +82,7 @@ Visiting /post, we're greeted with `Missing parameter: id`. This shows that the 
 http://10.10.68.254/post?id=-1%20union%20select%201,2,user(),4
 ```
 
-```
-user_6@localhost
-```
+![post](post_id_user.PNG)
 
 Let's fire up sqlmap and beat it up. A good practice is to intercept the request using burp suite and then saving it. I saved the request as sqhell_post.request.
 
