@@ -128,7 +128,7 @@ sqlmap --dbms mysql --headers="X-forwarded-for:1*" -u http://10.10.68.254/ -D sq
 
 ### User login
 
-This one, by far, was the most difficult one to come across. At first sight, it seems like any other SQL injection inside the `user?id=` parameter; however, after beating it up several times with sqlmap, I couldn't retrieve the flag. Good thing the ever so generous Mr Adam Langley gave us a following hint: *Well, dreams, they feel real while we're in them right?* 
+This one, by far, was the most difficult one to come across. At first sight, it seems like any other SQL injection inside the `user?id=` parameter; however, after beating it up several times with sqlmap, I couldn't retrieve the flag. Good thing the ever so generous Mr Adam Langley gave us the following hint: *Well, dreams, they feel real while we're in them right?* 
 
 Now, this is a quote from the movie inception. As any normal (arguable, but okay) pentester would do, we can google the term sql injection inception! This brings us to an article that refers to this notion of "inception" injection simply as Nested SQL injection. This gives us an idea of what to do next. Let's fire up burp and try Nested attack on the webserver.
 
