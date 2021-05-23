@@ -33,7 +33,7 @@ nmap -p22,80 -sV -sC -Pn -T4 -oA 10.10.68.254 10.10.68.254
 
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 ```
-The ssh isn't helpful without the credentials, so let's focus on the webserver for now. We'll run a gobuster scan while we visit the page.
+The ssh isn't useful without the credentials, so let's focus on the webserver for now. We'll run a gobuster scan while we visit the page.
 
 ### Gobuster 
 
