@@ -71,7 +71,7 @@ Upgrade-Insecure-Requests: 1
 username=admin'+or+'1'%3d'1&password=password
 ```
 
-On the third try, we can bypass the login and get the flag (you'll see it in the response). Don't forget to URL encode the request!
+On the third try, managed to bypass the login and get the flag (you'll see it in the response). Don't forget to URL encode the request!
 You can find the list of the different commands here: https://pentestlab.blog/2012/12/24/sql-injection-authentication-bypass-cheat-sheet/.
 
 ### Posts page
